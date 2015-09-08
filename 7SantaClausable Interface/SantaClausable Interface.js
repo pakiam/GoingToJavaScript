@@ -19,9 +19,10 @@ var notSanta = {
 
 
 function isSantaClausable(obj) {
-    if (obj.sayHoHoHo && obj.distributeGifts && obj.goDownTheChimney) {
-
+    if (obj.sayHoHoHo && typeof obj.sayHoHoHo=="function" && obj.distributeGifts && obj.goDownTheChimney) {
+        return true;
     }
+    return false;
 }
 
-console.log(santa.sayHoHoHo);
+console.log(isSantaClausable(santa));
