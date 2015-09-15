@@ -3,9 +3,10 @@ function blackFriday(year) {
     while (true) {
 
         var nov = new Date(year, 11, i);
-        if (nov.getDay() === 5 && nov.getDate === 30) {
-            return nov.getDate - 7;
-        } else if (nov.getDay() === 5) {
+        if (nov.getDay() === 5) {
+            if(nov.getDate()===30){
+                return nov.getDate() - 7;
+            }
             return nov.getDate();
         }
         i -= 1;
