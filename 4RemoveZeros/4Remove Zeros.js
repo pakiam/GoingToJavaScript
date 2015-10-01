@@ -9,14 +9,25 @@ function removeZeros(array) {
     // to use any Array or Object prototype methods such as .shift(), .push(), etc
 
     // the correctly sorted array should be returned.
-    var count=0;
-    for (var i=0;i<array.length;i++){
-        if (array[i]!=0){
-            array[count++]=array[i];
+    /*var count=0;
+     for (var i=0;i<array.length;i++){
+     if (array[i]!=0){
+     array[count++]=array[i];
+     }
+     }
+     while(count<array.length){
+     array[count++]=0;
+     }*/
+    var j=0;
+    var len = array.length;
+    for (var i = 0; i < len; i++) {
+
+        if (isNaN(array[j]) || array[j] == 0) {
+            array[array.length] = array[j];
+            array.splice(j, 1);
+            j = j - 1;
         }
-    }
-    while(count<array.length){
-        array[count++]=0;
+        j++;
     }
     return array;
 }
