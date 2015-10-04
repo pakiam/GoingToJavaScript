@@ -1,5 +1,5 @@
 function sum(num) {
-    var p = new Array;
+    var p = [];
     p[0] = 1;
     var j = 0;
     var k = 0;
